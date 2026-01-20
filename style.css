@@ -1,0 +1,40 @@
+/* Basic reset */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #077a3a;
+  color: #ffffff;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px 12px 28px;
+}
+
+.title {
+  margin: 8px 0 14px;
+  font-size: 18px;
+  font-weight: 650;
+  text-align: center;
+  letter-spacing: 0.2px;
+}
+
+/* Stack images like a PDF: full width, vertical scroll */
+.menu img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 12px;
+  border-radius: 10px;
+  /* border: 1px solid rgba(255,255,255,0.10);
+  background: #111114; */
+}
+
+/* Optional: reduce spacing on very small screens */
+@media (max-width: 420px) {
+  .page { padding: 12px 10px 22px; }
+  .menu img { margin-bottom: 10px; border-radius: 8px; }
+}
