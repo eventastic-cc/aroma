@@ -38,3 +38,32 @@ body {
   .page { padding: 12px 10px 22px; }
   .menu img { margin-bottom: 10px; border-radius: 8px; }
 }
+
+
+#preloader{
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #37654bc2;          /* soft dark overlay */
+  backdrop-filter: blur(10px);           /* blur behind */
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 9999;
+  transition: opacity .35s ease, visibility .35s ease;
+}
+
+#preloader img{
+  width: min(220px, 60vw);
+  height: auto;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+#preloader.hide{
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes pulse{
+  0%,100%{ transform: scale(1); opacity: .85; }
+  50%{ transform: scale(1.05); opacity: 1; }
+}

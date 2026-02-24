@@ -33,6 +33,9 @@
 </head>
 
 <body>
+  <div id="preloader" aria-label="Loading">
+    <img src="/src/Logo_Aroma.png" alt="Aroma Coffee" />
+  </div>
 
   <main class="page">
     <!-- <h1 class="title">Menu</h1> -->
@@ -46,4 +49,14 @@
   </main>
 
 </body>
+
+<script>
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    if (!preloader) return;
+    preloader.classList.add("hide");
+    setTimeout(() => preloader.remove(), 400);
+  });
+</script>
+
 </html>
